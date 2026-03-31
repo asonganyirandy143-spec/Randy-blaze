@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randy Blaze | Portfolio</title>
+    <link href="tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textPop {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes floatGlow {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 0.35;
+            }
+            50% {
+                transform: translateY(-18px);
+                opacity: 0.65;
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.9s ease-out both;
+        }
+        .fade-up-1 {
+            animation: fadeUp 0.9s ease-out 0.15s both;
+        }
+        .fade-up-2 {
+            animation: fadeUp 0.9s ease-out 0.3s both;
+        }
+        .fade-up-3 {
+            animation: fadeUp 0.9s ease-out 0.45s both;
+        }
+        .text-pop {
+            animation: textPop 1s ease-out 0.2s both;
+        }
+        .float-glow {
+            animation: floatGlow 7s ease-in-out infinite;
+        }
+        .float-glow-2 {
+            animation: floatGlow 9s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur border-b border-white border-opacity-10">
+        <div class="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+            <a href="#home" class="text-blue-400 text-2xl font-bold transition duration-300 hover:text-blue-300 hover:scale-105">Home</a>
+            <ol class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+                <li><a href="#about" class="inline-block transition duration-300 hover:text-blue-400 hover:-translate-y-0.5">About</a></li> 
+                <li><a href="#projects" class="inline-block transition duration-300 hover:text-blue-400 hover:-translate-y-0.5">Projects</a></li>
+                <li><a href="#skills" class="inline-block transition duration-300 hover:text-blue-400 hover:-translate-y-0.5">Skills</a></li>
+                <li><a href="#gaming" class="inline-block transition duration-300 hover:text-blue-400 hover:-translate-y-0.5">Gaming</a></li>
+                <img src="blaze.jpg" class="w-12 h-12 rounded-full border-2 border-blue-400">
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 md:px-10 py-24 relative bg-gray-900">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 bg-opacity-10 blur-3xl rounded-full float-glow"
+        style="background-image:url(blaze.jpg); background-size: cover; background-position-x: center;"></div>
+        <div class="absolute bottom-16 right-10 w-72 h-72 bg-cyan-500 bg-opacity-10 blur-3xl rounded-full float-glow-2"
+         style="background-image:url(blaze.jpg); background-size: cover; background-position-x: center;"></div>
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-4 fade-up">Frontend Developer</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-pop">
+                Hi, I'm <span class="text-blue-400">Randy Blaze</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl leading-8 fade-up-2">
+                I create clean, modern, and responsive websites with smooth layouts, strong dark aesthetics, and simple user-friendly design.
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap fade-up-3">
+                <a href="#projects" class="inline-block px-7 py-3 rounded-full bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-blue-500/20">View Work</a>
+                <a href="#about" class="inline-block px-7 py-3 rounded-full border border-white border-opacity-15 bg-white bg-opacity-5 hover:bg-white hover:bg-opacity-10 text-slate-200 font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 md:px-10 bg-gray-900 relative">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-10 right-20 w-64 h-64 bg-blue-500 bg-opacity-10 blur-3xl rounded-full float-glow"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-3 fade-up">ABOUT ME</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 fade-up-1">Who I Am</h2>
+            <p class="text-slate-400 text-lg leading-8 max-w-2xl mx-auto mb-14 fade-up-2">
+                I'm <span class="text-white font-semibold">Randy Blaze</span>, a passionate frontend developer focused on building modern websites, improving visual details, and turning ideas into real digital experiences.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="fade-up group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-8 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <h3 class="text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300">2+</h3>
+                    <p class="text-slate-400 text-sm uppercase tracking-widest">Years Learning</p>
+                </div>
+                <div class="fade-up-1 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-8 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <h3 class="text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300">15+</h3>
+                    <p class="text-slate-400 text-sm uppercase tracking-widest">Projects Completed</p>
+                </div>
+                <div class="fade-up-2 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-8 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <h3 class="text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300">100%</h3>
+                    <p class="text-slate-400 text-sm uppercase tracking-widest">Passion For Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Man United Section -->
+    <section id="man-united" class="py-24 px-6 md:px-10 bg-gray-900 relative">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-3 fade-up">MAN UNITED</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-14 fade-up-1">My Favourite Club</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="fade-up group rounded-2xl overflow-hidden border border-white border-opacity-10 bg-gray-800 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-blue-500">
+                    <div class="overflow-hidden">
+                        <img src="Man u.jpg" alt="Manchester United" class="w-full h-52 object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-300">Manchester United</h3>
+                        <p class="text-slate-400 mb-4">
+                            Manchester United has been my Favourite football club since childhood. I love thier history, playing style, and fan passion.Following this club inspired team work strategy, and perseverance in gaming and coding.
+                        </p>
+                        <a href="https://www.manutd.com" target="_blank" class="inline-block px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">
+                            Visit Official Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Section -->
+    <section id="gaming" class="py-24 px-6 md:px-10 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-3 fade-up">GAMING</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 fade-up-1">DLS</h2>
+            <p class="text-slate-400 text-lg leading-8 max-w-2xl mx-auto mb-14 fade-up-2">
+                DLS has been a huge part of my gaming journey! I've spent countless hours building my team, competing in leagues, and having fun with this amazing game. Here's a quick look at how I'm connected to DLS and my passion for it.
+            </p>
+            <div class="group rounded-2xl overflow-hidden border border-white border-opacity-10 bg-gray-800 shadow-lg mx-auto max-w-sm transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                <div class="overflow-hidden">
+                    <img id="dlsImage" src="dls.jpg" alt="DLS Shot" class="w-full h-32 object-cover transition duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-4 text-left">
+                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-300">My connection to DLS & Coding</h3>
+                    <p class="text-slate-400 mb-4">
+                        DLS isn't just a game to me. Over the years, it has sharpened my <strong>problem-solving</strong> and <strong>logical thinking</strong> skills, both essential in coding.
+                        For example, when building my team, I need to strategically select players, set formations, and make decisions on how to improve my team's performance. This is very similar to writing efficient code, where I need to think critically about the best solution, test different approaches, and <strong>debug</strong> issues.
+                        In a way, DLS has been an unofficial training ground, teaching me <strong>decision-making</strong>, <strong>optimization</strong>, and <strong>persistent improvement</strong>, all key to coding.
+                    </p>
+                    <a href="javascript:void(0)" onclick="toggleTeamImage()" class="inline-block px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">
+                        View My Team
+                    </a>
+                </div>
+            </div>
+            <div id="teamImageSection" class="mt-10 hidden">
+                <h3 class="text-3xl font-extrabold text-white mb-4">My DLS Team</h3>
+                <img src="team.jpg" alt="My DLS Team" class="w-full h-auto rounded-lg mb-4">
+                <p class="text-slate-400 mb-4">
+                    Here's an image of my DLS team! Over the years, I've carefully selected my players, optimized formations, and honed skills to make this team as strong as possible. Each player has a role to play, and together we are a force to be reckoned with in the DLS leagues.
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.firsttouchgames.dls3" target="_blank" class="inline-block px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">
+                    Download DLS on Play Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleTeamImage() {
+            var teamImageSection = document.getElementById("teamImageSection");
+            var dlsImage = document.getElementById("dlsImage");
+            teamImageSection.classList.toggle("hidden");
+            if (teamImageSection.classList.contains("hidden")) {
+                dlsImage.src = "dls.jpg";
+            } else {
+                dlsImage.src = "team.jpg";
+            }
+        }
+    </script>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 md:px-10 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-3 text-center fade-up">PROJECTS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-14 fade-up-1">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Blaze Dev Tech -->
+                <div class="fade-up group rounded-2xl overflow-hidden border border-white border-opacity-10 bg-gray-800 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <div class="overflow-hidden">
+                        <img src="blazedevtech.jpg" alt="Blaze Dev Project" class="w-full h-52 object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-300">Blaze Dev Tech</h3>
+                        <p class="text-slate-400 mb-4">A professional website showcasing modern web development projects and services.</p>
+                        <a href="https://www.blazedevtech.gleeze.com" target="_blank" class="inline-block px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">View Project</a>
+                    </div>
+                </div>
+                <!-- Blaze Web Guide -->
+                <div class="fade-up-1 group rounded-2xl overflow-hidden border border-white border-opacity-10 bg-gray-800 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <div class="overflow-hidden">
+                        <img src="blazeweb.jpg" alt="Blaze Web Project" class="w-full h-52 object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-300">Blaze Web Guide</h3>
+                        <p class="text-slate-400 mb-4">The updated version of Blaze Dev Tech, offering structured web development lessons and guides for learners.</p>
+                        <a href="https://www.blazewebguide.gleeze.com" target="_blank" class="inline-block px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">View Project</a>
+                    </div>
+                </div>
+                <!-- Enlarge Studio -->
+                <div class="fade-up-2 group rounded-2xl overflow-hidden border border-white border-opacity-10 bg-gray-800 shadow-lg transition duration-500 hover:-translate-y-3 hover:scale-105 hover:border-blue-400 hover:shadow-blue-500">
+                    <div class="overflow-hidden">
+                        <img src="studio.jpg" alt="Studio Project" class="w-full h-52 object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-300">Enlarge Studio</h3>
+                        <p class="text-slate-400 mb-4">A photo enlargement service offering premium prints in A4, A3, and A2 sizes with custom orders and WhatsApp ordering.</p>
+                        <a href="https://www.enlargestudio.gleeze.com" target="_blank" class="inline-block px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition duration-300 hover:-translate-y-1 hover:scale-105">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 md:px-10 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-blue-400 uppercase tracking-widest text-sm mb-3 fade-up">SKILLS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-14 fade-up-1">Languages & Frameworks</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                <!-- HTML -->
+                <div class="fade-up group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-6 shadow-lg transition duration-500 hover:-translate-y-2 hover:scale-105 hover:border-blue-400/20">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-12 h-12 mx-auto mb-3">
+                    <p class="text-white font-semibold">HTML</p>
+                </div>
+                <!-- Tailwind CSS -->
+                <div class="fade-up-1 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-6 flex flex-col items-center shadow-lg transition duration-500 hover:scale-105 hover:border-blue-400/60">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-12 h-12 mb-2" alt="Tailwind CSS">
+                    <p class="text-white font-semibold">Tailwind CSS</p>
+                </div>
+                <!-- JavaScript -->
+                <div class="fade-up-2 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-6 flex flex-col items-center shadow-lg transition duration-500 hover:-translate-y-2 hover:scale-105 hover:border-blue-400/60">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mb-2" alt="JavaScript">
+                    <p class="text-white font-semibold">JavaScript</p>
+                </div>
+                <!-- PHP -->
+                <div class="fade-up-3 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-6 flex flex-col items-center shadow-lg transition duration-500 hover:-translate-y-2 hover:scale-105 hover:border-blue-400/60">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 h-12 mb-2" alt="PHP">
+                    <p class="text-white font-semibold">PHP</p>
+                </div>
+                <!-- MySQL -->
+                <div class="fade-up-4 group rounded-2xl border border-white border-opacity-10 bg-gray-800 p-6 flex flex-col items-center shadow-lg transition duration-500 hover:-translate-y-2 hover:scale-105 hover:border-blue-400/60">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12 mb-2" alt="MySQL">
+                    <p class="text-white font-semibold">MySQL</p>
+                </div>
+            </div>
+            <p class="text-slate-400 text-left mt-6 max-w-4xl mx-auto">
+                These are the core languages and frameworks I use daily. HTML and Tailwind CSS help me build clean and responsive layouts, while JavaScript powers interactivity and logic. PHP and MySQL are used for backend operations and database management. Every skill listed here is honed through practice in real projects and coding challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-10 bg-gray-900 text-center text-slate-400">
+        <p>&copy; 2026 Randy Blaze | All rights reserved</p>
+        <div class="mt-4">
+            <a href="mailto:asonganyirandy143@gmail.com" class="text-blue-400 hover:text-blue-300 transition duration-300">Contact Me</a> | 
+            <a href="https://www.instagram.com/randyblaze32" target="_blank" class="text-blue-400 hover:text-blue-300 transition duration-300">Instagram</a> | 
+            <a href="https://github.com/asonganyirandy143-spec" target="_blank" class="text-blue-400 hover:text-blue-300 transition duration-300">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
